@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorSearch.Api", "VectorSearch.Api.csproj", "{4ECB6812-8CFF-45AB-8665-28042D85E537}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorSearch.Api", "VectorSearch.Api/VectorSearch.Api.csproj", "{4ECB6812-8CFF-45AB-8665-28042D85E537}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rbac.Api", "Rbac.Api.csproj", "{0B1628E6-9783-4F36-A290-4245F91B3EBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rbac.Api", "Rbac.Api/Rbac.Api.csproj", "{0B1628E6-9783-4F36-A290-4245F91B3EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,6 @@
+@VectorSearch.Api_HostAddress = http://localhost:5187
+
+GET {{VectorSearch.Api_HostAddress}}/search/
+Accept: application/json
+
+###

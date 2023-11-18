@@ -7,7 +7,7 @@ namespace Rbac.Api.Controllers;
 [ApiController]
 [Route("/api/v1/[controller]")]
 
-public class DataController(ILogger logger, IData data) : ControllerBase
+public class DataController(ILogger<DataController> logger, IData data) : ControllerBase
 {
     private readonly string _eventId = Guid.NewGuid().ToString();
 

@@ -18,8 +18,6 @@ public class Startup(IConfiguration configuration)
         var appiOptions = new ApplicationInsightsServiceOptions
         {
             ConnectionString = Configuration.GetSection("ApplicationInsights")["ConnectionString"]
-            //ConnectionString = "InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://appi-udai.applicationinsights.azure.com/"
-
         };
         services.Configure<TelemetryConfiguration>(config =>
         {
@@ -68,7 +66,6 @@ public class Startup(IConfiguration configuration)
                 { securityScheme, new string[] { } }
             });
         });
-
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,54 @@
+﻿@page "/users"
+@using AspireDemo.Common.Entities
+@using AspireDemo.Web.Services
+@inject UserService UserService
+@attribute [StreamRendering]
+
+<PageTitle>Users</PageTitle>
+
+<h1>Users</h1>
+
+<p>This component demonstrates showing data.</p>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>TenantId</th>
+                <th>DateJoined</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.UserId</td>
+                    <td>@user.LastName, @user.FirstName</td>
+                    <td>@user.Department</td>
+                    <td>@user.TenantId</td>
+                    <td>@user.DateJoined</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<User>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate streaming rendering
+        await Task.Delay(500);
+        users = await UserService.GetUsers();
+    }
+
+}

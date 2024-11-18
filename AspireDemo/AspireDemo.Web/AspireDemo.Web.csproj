@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AspireDemo-Orchestrator\AspireDemo.ServiceDefaults\AspireDemo.ServiceDefaults.csproj" />
     <ProjectReference Include="..\AspireDemo.Common\AspireDemo.Common.csproj" />
   </ItemGroup>
 
